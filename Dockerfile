@@ -18,6 +18,7 @@ FROM ubuntu:22.04 as production
 ARG TIMEZONE=UTC
 
 ### UPDATE ###
+RUN apt purge libnode-dev
 RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
 RUN apt update 
 
